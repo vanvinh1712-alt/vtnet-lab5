@@ -1,0 +1,19 @@
+stages:
+  prepare:
+    cmd: python3 src/prepare.py
+    deps:
+      - data/telecom_churn.csv
+      - src/prepare.py
+    outs:
+      - data/churn_features.csv
+
+  train_evaluate:
+    cmd: python3 src/train_evaluate.py
+    deps:
+      - data/churn_features.csv
+      - src/train_evaluate.py
+    outs:
+      - models/churn_model.pkl
+    metrics:
+      - metrics.json:
+          cache: false

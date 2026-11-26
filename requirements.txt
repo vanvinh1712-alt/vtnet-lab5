@@ -1,0 +1,5 @@
+# MLOps Lab 8 Dependencies: Git & DVC Dataset Versioning
+dvc>=3.0.0
+dvc-gdrive>=3.0.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
